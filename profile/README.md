@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/storm-harbor-banner.svg" width="100%" alt="Storm Harbor — Recovery stops being a promise." />
+  <img src="./assets/storm-harbor-banner-v2.svg" width="100%" alt="Storm Harbor — Recovery stops being a promise." />
 </div>
 
 <div align="center">
