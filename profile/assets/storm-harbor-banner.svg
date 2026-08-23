@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Storm Harbor</title>
+  <desc id="desc">Recovery stops being a promise. Open-source continuous disaster recovery readiness.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1118"/>
+      <stop offset="0.62" stop-color="#111c28"/>
+      <stop offset="1" stop-color="#10253c"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="76%" cy="42%" r="52%">
+      <stop offset="0" stop-color="#326ce5" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#326ce5" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#67a6ff"/>
+      <stop offset="1" stop-color="#326ce5"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.045"/>
+    </pattern>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <clipPath id="shieldClip">
+      <path d="M973 66l96 37v67c0 61-38 102-96 124-58-22-96-63-96-124v-67l96-37z"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="360" rx="16" fill="url(#background)"/>
+  <rect width="1200" height="360" rx="16" fill="url(#grid)"/>
+  <rect width="1200" height="360" rx="16" fill="url(#glow)"/>
+
+  <path d="M0 309c120-30 205-28 316 0s201 29 320 0 205-28 322 0 180 23 242 7v44H0z" fill="#326ce5" opacity="0.07"/>
+  <path d="M0 323c120-30 205-28 316 0s201 29 320 0 205-28 322 0 180 23 242 7" fill="none" stroke="#67a6ff" stroke-opacity="0.18" stroke-width="2"/>
+
+  <g transform="translate(72 72)">
+    <rect width="112" height="28" rx="4" fill="#326ce5" fill-opacity="0.13" stroke="#67a6ff" stroke-opacity="0.25"/>
+    <circle cx="15" cy="14" r="3" fill="#67a6ff"/>
+    <text x="26" y="18" fill="#9ec7ff" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" font-weight="600" letter-spacing="1.2">OPEN SOURCE</text>
+  </g>
+
+  <text x="72" y="166" fill="#f8fafc" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="58" font-weight="700" letter-spacing="-2.5">Storm Harbor</text>
+  <text x="72" y="219" fill="#94a3b8" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="26" font-weight="450" letter-spacing="-0.6">Recovery stops being <tspan fill="url(#accent)" font-weight="650">a promise.</tspan></text>
+  <text x="73" y="264" fill="#64748b" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" font-weight="600" letter-spacing="1.9">CONTINUOUS DISASTER RECOVERY READINESS</text>
+
+  <circle cx="973" cy="180" r="118" fill="#326ce5" opacity="0.12" filter="url(#softGlow)"/>
+  <path d="M973 66l96 37v67c0 61-38 102-96 124-58-22-96-63-96-124v-67l96-37z" fill="#326ce5" fill-opacity="0.2" stroke="#67a6ff" stroke-opacity="0.7" stroke-width="2"/>
+  <g clip-path="url(#shieldClip)">
+    <path d="M849 214c43-27 81-27 124 0s81 27 124 0" fill="none" stroke="#0b1118" stroke-opacity="0.75" stroke-width="18"/>
+    <path d="M849 244c43-27 81-27 124 0s81 27 124 0" fill="none" stroke="#67a6ff" stroke-opacity="0.7" stroke-width="5"/>
+  </g>
+  <path d="M958 112h30v39h32l14 23h-122l14-23h32v-39zm-25 73h80v37c-13 3-26 1-40-8-14-9-27-11-40-8v-21z" fill="#f8fafc"/>
+  <rect x="965" y="124" width="16" height="42" fill="#326ce5"/>
+
+  <g fill="#67a6ff">
+    <circle cx="841" cy="110" r="3"/>
+    <circle cx="1099" cy="254" r="3"/>
+  </g>
+  <g stroke="#67a6ff" stroke-opacity="0.32" fill="none">
+    <path d="M841 110h46l24 24"/>
+    <path d="M1058 230l41 24h32"/>
+  </g>
+  <text x="806" y="104" fill="#64748b" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9" letter-spacing="1">PROVENANCE</text>
+  <text x="1092" y="275" fill="#64748b" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9" letter-spacing="1">EVIDENCE</text>
+</svg>
