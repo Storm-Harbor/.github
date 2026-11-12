@@ -8,6 +8,8 @@ Before planning or editing, review the applicable requirements in:
 - [SPECS-DELIVERY.md](specs/SPECS-DELIVERY.md);
 - [SPECS-ACCEPTANCE.md](specs/SPECS-ACCEPTANCE.md).
 
+Also apply [SPECS-PRIVACY-AND-ACCESS.md](specs/SPECS-PRIVACY-AND-ACCESS.md) when a change touches identity, scope, knowledge, background work, operational telemetry or payment integration.
+
 These adapt useful workspace engineering practices to Storm Harbor. They do not import another product's business domains, private libraries, cloud deployment, organization project numbers or account requirements.
 
 ## Language and architecture
