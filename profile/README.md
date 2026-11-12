@@ -2,71 +2,43 @@
   <img src="./assets/storm-harbor-banner-v2.svg" width="100%" alt="Storm Harbor — Recovery stops being a promise." />
 </div>
 
-<div align="center">
-  <a href="https://github.com/Storm-Harbor/storm-harbor-app/blob/develop/LICENSE"><img alt="License: Apache 2.0" src="https://img.shields.io/badge/license-Apache%202.0-326CE5?style=flat-square"></a>
-  <a href="https://github.com/Storm-Harbor/storm-harbor-control-plane/actions/workflows/disaster-recovery-simulation.yml"><img alt="DR simulation workflow" src="https://img.shields.io/github/actions/workflow/status/Storm-Harbor/storm-harbor-control-plane/disaster-recovery-simulation.yml?branch=main&style=flat-square&label=DR%20simulation"></a>
-  <img alt="Project status: safe simulation" src="https://img.shields.io/badge/status-safe%20simulation-0B7285?style=flat-square">
-</div>
+**Storm Harbor** is an open-source, declarative recovery control plane for private projects and multicloud environments. Discover dependencies, evaluate readiness, plan and exercise recovery, then restore environments through authorized, auditable reconciliation.
 
-<br />
+[Product website](https://storm-harbor.github.io/storm-harbor-app/) · [English documentation](https://storm-harbor.github.io/storm-harbor-control-plane/) · [Roadmap](https://storm-harbor.github.io/storm-harbor-control-plane/roadmap/) · [Support the project](https://storm-harbor.github.io/storm-harbor-control-plane/community/sponsorship/)
 
-**Storm Harbor** is an open-source continuous disaster-recovery readiness platform. It connects code, cloud, clusters, backups, and policy into a continuously reconciled view of what can recover — and what stands in the way.
+## Your environment remains yours
 
-Repositories describe intent. APIs expose actual state. Backups live elsewhere. Evidence is scattered across pipelines and tickets. Storm Harbor brings those signals together to answer one operational question:
+Any organization can connect explicitly authorized private repositories and infrastructure without making projects public. iot.EraX is the creator and an initial consumer; its identity, cloud and knowledge services are optional integrations.
 
-> **Can this service recover now, within its agreed RTO and RPO?**
+Cloud adapters target **AWS, Azure, DigitalOcean, Oracle Cloud and GCP**. A journey can span providers, with explicit compatibility checks for data, identity, networking and service recovery. No managed service is assumed portable simply because its resource has a common name.
 
-## From signals to recovery proof
+## A declarative journey
 
-| | Stage | Outcome |
-|:--:|---|---|
-| **01** | **Observe** | Discover authorized repositories, cloud assets, clusters, backups, and policies. |
-| **02** | **Assess** | Connect dependencies and compare current state with criticality, RTO, and RPO. |
-| **03** | **Exercise** | Freeze an immutable plan and run it through approvals, guardrails, and health gates. |
-| **04** | **Prove** | Preserve signed results outside the recovered failure domain. |
+**Configure → discover → inventory → plan → validate → simulate → approve → recover → verify → reconcile.**
 
-## Federated by design
+Versioned YAML drives the guided interface and CLI. The control plane observes actual state and reconciles it with declared intent, freezes the exact execution plan and records evidence outside the recovered failure domain.
 
-Storm Harbor does not replace the tools that already own your infrastructure. Each domain remains authoritative while the control plane builds a current operational model with provenance and freshness.
+- **Go 1.26.x** for runtime applications, APIs, operators/controllers, agents, CLIs and SDKs.
+- **Extensible resources and controllers**, including native Kubernetes CRDs through the Kubernetes adapter.
+- **Project-owned AI/RAG/CLI**, with private knowledge and authorized minimal results; no mandatory AI service.
+- **Private organization/project scopes**, short-lived permissions, approval gates, idempotency and interruptible execution.
 
-```text
- Authoritative sources              Storm Harbor                 Recovery & proof
+The public product website supports ten locales. Technical documentation is maintained in English.
 
- GitHub · Terraform ───────┐     ┌────────────────────┐     ┌── GCP foundation
- Google Cloud APIs ────────┼────►│ Discover · Assess  │────►├── Databases · GKE
- Kubernetes · FluxCD ──────┤     │ Orchestrate · Prove│     ├── Workloads
- Policies · Backups ───────┘     └────────────────────┘     └── Signed evidence
-                                         │
-                         runs outside the recovery target
-```
+## Current status
 
-### The principles behind the platform
+**Storm Harbor currently provides documentation, a GCP-specific configuration example and safe Node.js simulations.** The Go runtime, production cloud adapters, extension registry and installable Kubernetes CRDs are planned. The Next.js authentication/BFF scaffold is transitional; the public website is deployed as static content without a Node.js production server.
 
-| | |
-|---|---|
-| **Federated authority**<br/>Git, cloud APIs, vaults, and evidence stores retain ownership of their domains. | **Ephemeral identity**<br/>OIDC and workload identity replace persistent cloud keys. |
-| **Fail closed**<br/>Missing evidence, stale data, or policy failure never appears healthy. | **Evidence first**<br/>Inputs, decisions, actors, actions, timing, and outcomes remain linked and auditable. |
+No cloud credentials or external infrastructure mutations are performed by the existing mock workflows. The project is not currently affiliated with CNCF. See the evidence-based [CNCF readiness plan](https://storm-harbor.github.io/storm-harbor-control-plane/community/cncf-readiness/).
 
-## Explore Storm Harbor
+## Repositories and community
 
-| Repository | What you will find |
-|---|---|
-| [**storm-harbor-control-plane**](https://github.com/Storm-Harbor/storm-harbor-control-plane) | Architecture, contracts, safe recovery simulations, evidence, technical documentation, and the delivery roadmap. |
-| [**storm-harbor-app**](https://github.com/Storm-Harbor/storm-harbor-app) | The multilingual product website, identity flows, and the emerging customer control-plane experience. |
+| Repository | Responsibility |
+| --- | --- |
+| [storm-harbor-control-plane](https://github.com/Storm-Harbor/storm-harbor-control-plane) | English technical documentation, architecture, schemas and safe simulation contracts |
+| [storm-harbor-app](https://github.com/Storm-Harbor/storm-harbor-app) | Multilingual public website and transitional application scaffold |
+| [.github](https://github.com/Storm-Harbor/.github) | Organization profile, maintainers, contribution/conduct/security policies and funding information |
 
-Start with the [product overview](https://github.com/Storm-Harbor/storm-harbor-control-plane/blob/main/docs/product/overview.md), continue through the [control-plane architecture](https://github.com/Storm-Harbor/storm-harbor-control-plane/blob/main/docs/architecture/control-plane.md), or inspect the [roadmap](https://github.com/Storm-Harbor/storm-harbor-control-plane/blob/main/docs/roadmap.md).
+Read the [contribution guide](https://github.com/Storm-Harbor/.github/blob/main/CONTRIBUTING.md), [maintainer roster](https://github.com/Storm-Harbor/.github/blob/main/MAINTAINERS.md) and [security policy](https://github.com/Storm-Harbor/.github/blob/main/SECURITY.md). Public contributions and fixtures must not disclose customer repositories, knowledge or operational evidence.
 
-> [!IMPORTANT]
-> **Storm Harbor is currently an architecture and safe-simulation scaffold, not a production recovery engine.** The existing workflows exercise contracts, ordering, guardrails, and evidence without cloud credentials or changes to external resources. Real operations remain gated by the published security and readiness criteria.
-
-## Build with us
-
-We are shaping the contracts, safeguards, and operating model before enabling privileged recovery. Contributions that improve the architecture, threat model, adapter boundaries, simulations, evidence, documentation, or developer experience are welcome.
-
-- Read the [contribution expectations](https://github.com/Storm-Harbor/storm-harbor-control-plane#contributing).
-- Explore [open issues](https://github.com/Storm-Harbor/storm-harbor-control-plane/issues).
-- Review the [security architecture](https://github.com/Storm-Harbor/storm-harbor-control-plane/blob/main/docs/architecture/security.md).
-
-<div align="center">
-  <sub>Open source under Apache 2.0 · GCP-first · Built by <a href="https://ioterax.com">iot.EraX</a></sub>
-</div>
+Open source under Apache 2.0 · Created by [iot.EraX](https://ioterax.com)
