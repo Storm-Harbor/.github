@@ -1,6 +1,6 @@
 # Storm Harbor engineering guidance
 
-Storm Harbor is an independent, declarative multicloud recovery project. iot.EraX is its creator and an initial consumer, not a required identity, cloud or knowledge provider. Preserve private organization/project boundaries. The accepted scope includes AWS, Azure, DigitalOcean, Oracle Cloud and GCP through adapters, optional project-owned AI/RAG/CLI, YAML journeys and extensible resources/controllers.
+Storm Harbor is an independent, declarative multicloud recovery project. No adopter's identity, cloud account or knowledge service is a mandatory integration. Preserve private organization/project boundaries. The accepted scope includes AWS, Azure, DigitalOcean, Oracle Cloud and GCP through adapters, optional project-owned AI/RAG/CLI, YAML journeys and extensible resources/controllers.
 
 Before planning or editing, review the applicable requirements in:
 
@@ -18,7 +18,7 @@ Go 1.26.x is the official release line for new runtime applications, APIs, opera
 
 Use contract-first hexagonal boundaries, explicit mappings and versioned `storm-lib-*` contract owners. Keep vendor SDKs and private knowledge behind scoped adapters. Go expected failures use native typed errors with stable codes, categories, localization keys and safe arguments; outer adapters map transport and render text. Unknown failures fail closed without leaking internals. Configuration and AI output never grant authorization.
 
-Technical documentation and repository-facing material are in English. The product website maintains all ten locale catalogs atomically; public errors and UI text use localization keys. Stable machine identifiers and provider/product names are not translated. Do not expose customer names, repositories, knowledge or operational evidence in examples; use synthetic fixtures unless explicit publication permission exists.
+Technical documentation and repository-facing material are in English. The product website maintains all configured locale catalogs atomically; public errors and UI text use localization keys. Public website, documentation and organization-profile branding use Storm Harbor without corporate bylines or corporate-site links. Preserve legal source licenses and notices. Stable machine identifiers and provider/product names are not translated. Do not expose customer names, repositories, knowledge or operational evidence in examples; use synthetic fixtures unless explicit publication permission exists.
 
 ## Repository and delivery workflow
 
